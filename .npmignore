@@ -1,0 +1,6 @@
+config/
+js/*
+.tmp/
+README.md
+Gruntfile.js
+!js/dist.min.js

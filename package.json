@@ -1,5 +1,5 @@
 {
-  "name": "s3-autoindex",
+  "name": "@dnj/iso-homepage",
   "version": "1.0.0",
   "description": "Static website to generate directory listing for S3 buckets.",
   "dependencies": {},
@@ -11,6 +11,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sgtFloyd/s3-autoindex.git"
+    "url": "git+https://github.com/dnj/iso.jeyserver.com.git"
   }
 }
