@@ -1,0 +1,29 @@
+name: deploy
+on:
+  workflow_run:
+    workflows: ["npm-publish"]
+    types:
+      - completed
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+
+      - name: download npm package
+        run: |
+          npm pack @dnj/iso.jeyserver.com
+          tar --strip-components=1 -xvf dnj-*.tgz
+          rm -f dnj-*.tgz
+
+      - name: Upload files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server-dir: public_html/
+          server: s22.jeyserver.com
+          username: ${{ secrets.ftp_username }}
+          password: ${{ secrets.ftp_password }}

@@ -1,7 +1,10 @@
 {
-  "name": "@dnj/iso-homepage",
-  "version": "1.0.0",
+  "name": "@dnj/iso.jeyserver.com",
+  "version": "1.0.4",
   "description": "Static website to generate directory listing for S3 buckets.",
+  "scripts": {
+    "build": "grunt"
+  },
   "dependencies": {},
   "devDependencies": {
     "grunt": "^1.0.1",

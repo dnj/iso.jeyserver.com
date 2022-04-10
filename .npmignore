@@ -1,6 +1,7 @@
 config/
 js/*
 .tmp/
+.github/
 README.md
 Gruntfile.js
 !js/dist.min.js
