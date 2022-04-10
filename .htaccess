@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteCond %{HTTPS} = on
+RewriteCond %{HTTPS} on
 RewriteRule ^(.+\.iso)$ https://s3.jeyserver.com/iso/$1 [R=301,NC,L]
-RewriteCond %{HTTPS} = off
+RewriteCond %{HTTPS} off
 RewriteRule ^(.+\.iso)$ http://s3.jeyserver.com/iso/$1 [R=301,NC,L]
